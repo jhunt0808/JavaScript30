@@ -86,7 +86,7 @@
     }
 
 	.dot {
-		background: #111111;
+		background: #222222;
 		border-radius: 15px;
 		height: 15px;
 		left: calc(50% - 7.5px);
@@ -129,7 +129,8 @@
 
 		const hours = now.getHours();
 		const hdegrees = (hours / 12) * 360;
-		const hoursDegrees = ((hours / 12) * 360) + 90 + mdegrees;
+		const hourFraction = (360 / 12) * mdegrees;
+		const hoursDegrees = ((hours / 12) * 360) + 90 + hourFraction;
 		hoursHand.style.transform = `rotate(${hoursDegrees}deg)`;
 	}
 
